@@ -1,5 +1,5 @@
 import streamlit as st
-from openai import OpenAI
+import openai
 
 # Show title and description.
 st.title("📄 Document question answering")
@@ -15,7 +15,7 @@ openai_api_key = st.secrets["openai"]["api_key"]
 
 
 # Create an OpenAI client.
-client = OpenAI(api_key=openai_api_key)
+openai.api_key = openai_api_key
 
 # Let the user upload a file via `st.file_uploader`.
 uploaded_file = st.file_uploader(
