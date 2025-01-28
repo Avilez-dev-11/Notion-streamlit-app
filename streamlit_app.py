@@ -42,7 +42,7 @@ if uploaded_file and question:
 
     # Generate an answer using the OpenAI API.
     stream = client.chat.completions.create(
-        model="gpt-4",
+        model="gpt-3.5-turbo",
         messages=messages,
         stream=True,
     )
